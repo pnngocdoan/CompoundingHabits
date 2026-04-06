@@ -34,10 +34,11 @@ We use the following third-party services. Each has its own privacy policy:
 | Service | Purpose | Privacy Policy |
 |---------|---------|----------------|
 | Supabase | Cloud database — stores your habit and entry data | https://supabase.com/privacy |
+| Groq | AI inference — generates habit goal suggestions from your habit name and motivation | https://groq.com/privacy-policy/ |
 
 ## 5. Data Storage and Security
 
-Your habit data is stored on Supabase's cloud infrastructure (hosted on AWS). All data is transmitted over HTTPS/TLS. We do not access your device's files, camera, contacts, or location.
+Your habit data is stored on Supabase's cloud infrastructure (hosted on AWS). When you use the AI habit goal suggestions feature, your habit name and motivation text are sent to Groq's API servers for processing; this data is not stored by us after the request completes. All data is transmitted over HTTPS/TLS. We do not access your device's files, camera, contacts, or location.
 
 Local preferences are stored using AsyncStorage on your device and are never transmitted to any server.
 
