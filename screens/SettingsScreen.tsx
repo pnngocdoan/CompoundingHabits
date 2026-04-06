@@ -22,7 +22,7 @@ import { router } from 'expo-router';
 import { COLORS, FONTS } from '@constants/theme';
 import { supabase } from '../api/supabase';
 
-const PRIVACY_POLICY_URL = 'https://ngocdoanpn.github.io/CompoundingHabits/privacy'; // TODO: update after publishing PRIVACY_POLICY.html to GitHub Pages
+const PRIVACY_POLICY_URL = 'https://pnngocdoan.github.io/CompoundingHabits/PRIVACY_POLICY.html';
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
