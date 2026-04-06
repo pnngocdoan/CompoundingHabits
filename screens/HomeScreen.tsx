@@ -125,7 +125,16 @@ export default function HomeScreen() {
 
         {/* Header */}
         <Animated.View style={[styles.header, headerStyle]}>
-          <Text style={styles.title}>Compounding Habits</Text>
+          <View style={styles.titleRow}>
+            <Text style={styles.title}>Compounding Habits</Text>
+            <Pressable
+              onPress={() => router.push('/settings')}
+              hitSlop={12}
+              style={styles.menuBtn}
+            >
+              <Feather name="menu" size={22} color={COLORS.text} />
+            </Pressable>
+          </View>
           <Text style={styles.intro}>
             <Text style={styles.introMuted}>I have been growing </Text>
             <Text style={[styles.introUnderline, { textDecorationColor: isPositive ? COLORS.win : COLORS.loss }]}>{pctLabel}</Text>
@@ -193,12 +202,21 @@ const styles = StyleSheet.create({
     paddingTop: 28,
     paddingBottom: 20,
   },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  menuBtn: {
+    paddingTop: 6,
+  },
   title: {
     color: COLORS.text,
     fontSize: 40,
     fontFamily: FONTS.heading.bold,
     letterSpacing: -0.8,
-    marginBottom: 12,
+    flex: 1,
   },
   intro: {
     fontSize: 20,

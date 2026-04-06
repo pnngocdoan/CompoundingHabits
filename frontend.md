@@ -10,8 +10,7 @@
 - `app/habit/add.tsx` — mounts `AddHabitScreen`
 
 ## Design System
-- **BG**: `#000` / Cards: `#111` / Win: `#22C55E` / Loss: `#EF4444` / Muted: `#A3A3A3`
-- Font: BricolageGrotesque (headings), DMSans (body)
+- Use colors and fonts from @constants/theme.ts. NO EXCEPTION
 - `DEBUG_OUTLINES` toggle in `constants/theme.ts`
 
 ## Path Aliases
@@ -27,7 +26,8 @@
 - **Slide 1 — "The Drop-Off"**: heading copy (BricolageGrotesque); 8 habit cards in 2 rows of 4 (each row `transform: [{ rotate: '-25deg' }]`); columns 2 & 4 raised –30px; Ionicons per card; staggered fade+translateY on mount, infinite float via `withRepeat`
 - **Slide 2 — "The Why"**: Lottie runner animation (`assets/animations/runner.json`), body + bold copy
 - **Slide 3 — "The Math"**: heading, dual-line SVG graph (ideal green / worst red, 0–365 days), legend, body copy
-- "Get Started" (last slide) and "Skip" both call `AsyncStorage.setItem('intro_seen', '1')` → `router.replace('/(tabs)')`
+- **Slide 4 — "The 1% Better Theory"** (`screens/IntroSlide4.tsx`): heading + sub-copy explaining compounding; animated formula row (Day 0→1→2→n); 2×2 milestone card grid (1 week/month/3 months/1 year, staggered fade-in on `active`); app-context note at bottom. Last card (1 year) inverted black bg.
+- "Get Started" (last slide, now slide 4) and "Skip" both call `AsyncStorage.setItem('intro_seen', '1')` → `router.replace('/(tabs)')`
 - Deps: `lottie-react-native`, `@react-native-async-storage/async-storage`
 
 ### Home Screen (`app/(tabs)/index.tsx`)

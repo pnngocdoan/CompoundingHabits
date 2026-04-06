@@ -93,6 +93,8 @@ export default function RootLayout() {
             headerBackTitle: '',
           }}
         />
+        <Stack.Screen name="settings" />
+        <Stack.Screen name="theory" />
       </Stack>
     </>
   );
